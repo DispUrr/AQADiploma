@@ -13,9 +13,9 @@ public class SQLData {
     static String password = System.getProperty("db.password");
 
     public static void clearTables() {
-        val cleanCreditRequest = "DELETE * FROM credit_request_entity;";
-        val cleanOrder = "DELETE * FROM order_entity;";
-        val cleanPayment = "DELETE * FROM payment_entity;";
+        val cleanCreditRequest = "DELETE FROM credit_request_entity;";
+        val cleanOrder = "DELETE FROM order_entity;";
+        val cleanPayment = "DELETE FROM payment_entity;";
         val runner = new QueryRunner();
 
         try (val conn = DriverManager.getConnection(url, user, password)) {
