@@ -40,27 +40,28 @@ public class CreditPage {
         yearField.setValue(card.getYear());
         cardholderField.setValue(card.getCardholder());
         cvcField.setValue(card.getCvc());
+        continueButton.click();
     }
     //Ожидание появления поп-апов
-    public void waitForSuccessNotification() {
+    public void waitNotificationSuccessVisible() {
         successOperation.waitUntil(visible, 10000);
     }
-    public void waitForFailNotification() {
+    public void waitNotificationFailedVisible() {
         failOperation.waitUntil(visible, 10000);
     }
-    public void waitForWrongNotification() {
+    public void waitNotificationWrongFormatVisible() {
         wrongFormatError.waitUntil(visible, 10000);
     }
-    public void waitForCardExpiredNotification() {
+    public void waitNotificationValidityErrorVisible() {
         cardExpiredError.waitUntil(visible, 10000);
     }
-    public void waitForValidityErrorNotification() {
+    public void waitNotificationExpiredErrorVisible() {
         validityError.waitUntil(visible, 10000);
     }
-    public void waitForExpiredErrorNotification() {
+    public void waitNotificationRequiredFieldVisible() {
         fieldRequiredError.waitUntil(visible, 10000);
     }
-    public void waitForFullWrongFormatNotification() {
+    public void waitNotificationFullWrongFormatVisible() {
         wrongFormatFiveError.shouldHaveSize(5);
         fieldRequiredError.waitUntil(visible, 10000);
     }

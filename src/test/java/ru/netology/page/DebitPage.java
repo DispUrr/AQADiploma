@@ -21,13 +21,14 @@ public class DebitPage {
     private SelenideElement cvcField = $(byText("CVC/CVV")).parent().$("[class=\"input__control\"]");
     // Поп-апы - реакция на отправку формы
     private SelenideElement successOperation = $$("[class=\"notification__content\"]").find(text("Операция одобрена Банком."));
-    private SelenideElement failOperation = $$("[class=\"notification__content\"]").find(text("Ошибка! Банк отказал в проведении операции."));
+    private SelenideElement failedOperation = $$("[class=\"notification__content\"]").find(text("Ошибка! Банк отказал в проведении операции."));
     private SelenideElement wrongFormatError = $(byText("Неверный формат"));
     private ElementsCollection wrongFormatFiveError = $$(byText("Неверный формат")); // все поля не заполнены = неверный формат
     private SelenideElement validityError = $(byText("Неверно указан срок действия карты"));
     private SelenideElement cardExpiredError = $(byText("Истёк срок действия карты"));
     private SelenideElement fieldRequiredError = $(byText("Поле обязательно для заполнения"));
 
+    private SelenideElement cancelSuccessField = $$("[class=\"icon-button__text\"]").first();
     private SelenideElement continueButton = $$("button").find(exactText("Продолжить"));
 
     public DebitPage() {
@@ -40,28 +41,36 @@ public class DebitPage {
         yearField.setValue(card.getYear());
         cardholderField.setValue(card.getCardholder());
         cvcField.setValue(card.getCvc());
+        continueButton.click();
     }
     //Ожидание появления поп-апов
-    public void waitForSuccessNotification() {
+    public void waitNotificationSuccessVisible() {
         successOperation.waitUntil(visible, 10000);
+        cancelSuccessField.click();
     }
-    public void waitForFailNotification() {
-        failOperation.waitUntil(visible, 10000);
+
+    public void waitNotificationFailedVisible() {
+        failedOperation.waitUntil(visible, 10000);
     }
-    public void waitForWrongNotification() {
+
+    public void waitNotificationWrongFormatVisible() {
         wrongFormatError.waitUntil(visible, 10000);
     }
-    public void waitForCardExpiredNotification() {
-        cardExpiredError.waitUntil(visible, 10000);
-    }
-    public void waitForValidityErrorNotification() {
+
+    public void waitNotificationValidityErrorVisible() {
         validityError.waitUntil(visible, 10000);
     }
-    public void waitForExpiredErrorNotification() {
+
+    public void waitNotificationExpiredErrorVisible() {
+        cardExpiredError.waitUntil(visible, 10000);
+    }
+
+    public void waitNotificationRequiredFieldVisible() {
         fieldRequiredError.waitUntil(visible, 10000);
     }
-    public void waitForFullWrongFormatNotification() {
-        wrongFormatFiveError.shouldHaveSize(5);
+
+    public void waitNotificationFullWrongFormatVisible() {
+        wrongFormatFiveError.shouldHaveSize(4);
         fieldRequiredError.waitUntil(visible, 10000);
     }
 
