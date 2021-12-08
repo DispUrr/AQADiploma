@@ -11,7 +11,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/data/SQLData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/data/SQLData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,14 +46,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../challenge/challenge" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Gradle.DebitPaymentServiceTest.shouldConfirmPaymentWithValidCard">
+  <component name="RunManager" selected="Gradle.CreditPaymentServiceTest.shouldConfirmCreditPayWithValidCard">
     <configuration name="CreditPaymentServiceTest.shouldConfirmCreditPayWithValidCard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -161,8 +161,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DebitPaymentServiceTest.shouldConfirmPaymentWithValidCard" />
         <item itemvalue="Gradle.CreditPaymentServiceTest.shouldConfirmCreditPayWithValidCard" />
+        <item itemvalue="Gradle.DebitPaymentServiceTest.shouldConfirmPaymentWithValidCard" />
         <item itemvalue="Gradle.CreditPaymentServiceTest.shouldCreditPayInvalidDateYearCard" />
         <item itemvalue="Gradle.CreditPaymentServiceTest.shouldCreditPayNonExistentCard" />
         <item itemvalue="Gradle.CreditPaymentServiceTest.shouldDeniedCreditPayWithDeclinedCard" />
@@ -184,6 +184,9 @@
       <workItem from="1634199219232" duration="2792000" />
       <workItem from="1634289287722" duration="4525000" />
       <workItem from="1634296498413" duration="30000" />
+      <workItem from="1634817917372" duration="695000" />
+      <workItem from="1634909248177" duration="3000" />
+      <workItem from="1634910271461" duration="605000" />
     </task>
     <servers />
   </component>
