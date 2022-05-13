@@ -89,7 +89,7 @@ public class CreditPaymentServiceTest {
     }
 
     @Test
-    @DisplayName("Debit payment by card with exceed year, alarm under field: Неверно указан срок действия карты, DB status: no status")
+    @DisplayName("Credit payment by card with exceed year, alarm under field: Неверно указан срок действия карты, DB status: no status")
     void shouldPaymentExceedYearCard() {
         val startPage = new StartPage();
         val payment = startPage.pickCreditWay();
