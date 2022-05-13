@@ -37,6 +37,18 @@ public class SQLData {
         return getData(codesSQL);
     }
 
+    public static String findCountOrderEntity() {
+        Long count = null;
+        val codesSQL = " SELECT COUNT(*) FROM order_entity;";
+        val runner = new QueryRunner();
+        try (val conn = DriverManager.getConnection(url, user, password)) {
+            count = runner.query(conn, codesSQL, new ScalarHandler<>());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return Long.toString(count);
+    }
+
      public static String getData(String query) {
         String data = "";
         val runner = new QueryRunner();

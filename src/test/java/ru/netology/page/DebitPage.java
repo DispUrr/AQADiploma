@@ -57,6 +57,10 @@ public class DebitPage {
         wrongFormatError.waitUntil(visible, 10000);
     }
 
+    public void waitNotificationCardExpiredError() {
+        cardExpiredError.waitUntil(visible, 10000);
+    }
+
     public void waitNotificationValidityErrorVisible() {
         validityError.waitUntil(visible, 10000);
     }

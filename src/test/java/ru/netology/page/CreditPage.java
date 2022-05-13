@@ -53,8 +53,13 @@ public class CreditPage {
         wrongFormatError.waitUntil(visible, 10000);
     }
     public void waitNotificationValidityErrorVisible() {
+        validityError.waitUntil(visible, 10000);
+    }
+
+    public void waitNotificationCardExpiredError() {
         cardExpiredError.waitUntil(visible, 10000);
     }
+
     public void waitNotificationExpiredErrorVisible() {
         validityError.waitUntil(visible, 10000);
     }
@@ -62,8 +67,9 @@ public class CreditPage {
         fieldRequiredError.waitUntil(visible, 10000);
     }
     public void waitNotificationFullWrongFormatVisible() {
-        wrongFormatFiveError.shouldHaveSize(5);
+        wrongFormatFiveError.shouldHaveSize(4);
         fieldRequiredError.waitUntil(visible, 10000);
     }
+
 
 }

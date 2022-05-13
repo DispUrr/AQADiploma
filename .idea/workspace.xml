@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4713144a-af36-4686-982a-5e160bb25de2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/reporting documents/Report.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reporting documents/Summary.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reporting documents/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,12 +15,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reporting documents/Plan.md" beforeDir="false" afterPath="$PROJECT_DIR$/reporting documents/Plan.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/data/DataHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/data/DataHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/data/SQLData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/data/SQLData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/page/CreditPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/page/CreditPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/page/DebitPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/page/DebitPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/test/CreditPaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/test/CreditPaymentServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/test/DebitPaymentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/test/DebitPaymentServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,24 +132,24 @@
     <property name="project.structure.side.proportion" value="0.525661" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Gradle.DebitPaymentServiceTest.shouldConfirmPaymentWithValidCard">
-    <configuration name="AQADipoma [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.DebitPaymentServiceTest">
+    <configuration name="CreditPaymentServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="--tests &quot;ru.netology.test.CreditPaymentServiceTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":test" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -170,12 +175,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CreditPaymentServiceTest.shouldDeniedCreditPayWithDeclinedCard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CreditPaymentServiceTest.shouldCreditPayNullMonthCard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.netology.test.CreditPaymentServiceTest.shouldDeniedCreditPayWithDeclinedCard&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.netology.test.CreditPaymentServiceTest.shouldCreditPayNullMonthCard&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -191,12 +196,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DebitPaymentServiceTest.shouldConfirmPaymentWithValidCard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DebitPaymentServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.netology.test.DebitPaymentServiceTest.shouldConfirmPaymentWithValidCard&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.netology.test.DebitPaymentServiceTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -212,12 +217,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="DebitPaymentServiceTest.shouldDeniedPaymentWithDeclinedCard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="DebitPaymentServiceTest.shouldPaymentNullMonthCard" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.netology.test.DebitPaymentServiceTest.shouldDeniedPaymentWithDeclinedCard&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.netology.test.DebitPaymentServiceTest.shouldPaymentNullMonthCard&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -235,11 +240,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.DebitPaymentServiceTest.shouldConfirmPaymentWithValidCard" />
+        <item itemvalue="Gradle.DebitPaymentServiceTest" />
+        <item itemvalue="Gradle.DebitPaymentServiceTest.shouldPaymentNullMonthCard" />
+        <item itemvalue="Gradle.CreditPaymentServiceTest.shouldCreditPayNullMonthCard" />
+        <item itemvalue="Gradle.CreditPaymentServiceTest" />
         <item itemvalue="Gradle.CreditPaymentServiceTest.shouldConfirmCreditPayWithValidCard" />
-        <item itemvalue="Gradle.CreditPaymentServiceTest.shouldDeniedCreditPayWithDeclinedCard" />
-        <item itemvalue="Gradle.DebitPaymentServiceTest.shouldDeniedPaymentWithDeclinedCard" />
-        <item itemvalue="Gradle.AQADipoma [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -266,6 +271,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
